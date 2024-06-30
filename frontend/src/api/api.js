@@ -1,15 +1,16 @@
 import axios from 'axios';
 
-const API_URL = "https://coffee-shop-finderbr.vercel.app/api/";
+const API_URL = "https://coffee-shop-finderbr.vercel.app/api";
 
 export const getShops = () => {
   return axios.get(`${API_URL}/shops`)
     .then(response => {
-      return response.data; // Assuming you want to return data from the response
+      console.log(response.data)
+      return response.data; 
     })
     .catch(error => {
       console.error('Error fetching shops:', error);
-      throw error; // Rethrow or handle the error as needed
+      throw error; 
     });
 };
 

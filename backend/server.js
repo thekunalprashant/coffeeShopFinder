@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: ["https://coffee-shop-finder-3prl.vercel.app/"],
     methods: ["POST", "GET"],
-    credentials: false,
+    credentials: true,
   })
 );
 app.use(express.json());
