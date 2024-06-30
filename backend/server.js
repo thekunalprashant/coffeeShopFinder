@@ -14,9 +14,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use("/", (req, res)=>{
-res.send("this is backend")
-})
+
 app.use('/api/shops', coffeeShopRoutes);
 app.use('/api/products', productRoutes);
 
