@@ -10,11 +10,11 @@ const HomePage = () => {
 
   useEffect(() => {
     getShops().then((response) => {
-      setShops(response.data);
+      setShops(response);
     });
   }, []);
 
-  const filteredShops = shops.filter((shop) =>
+  const filteredShops = shops?.filter((shop) =>
     shop.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 

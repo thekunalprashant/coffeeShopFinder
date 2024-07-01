@@ -10,13 +10,7 @@ const coffeeShopRoutes = require("./routes/coffeeShopRoutes");
 const productRoutes = require("./routes/productRoutes");
 
 const app = express();
-app.use(
-  cors({
-    origin: ["https://coffee-shop-finder-3prl.vercel.app/"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/shops", coffeeShopRoutes);
